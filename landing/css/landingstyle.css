@@ -1,0 +1,117 @@
+.topbar{
+    
+    background-color: lightblue;
+    text-align: center;
+    font-family:monospace;
+    font-size: 70px;
+    border-style: solid;
+    border-left-color: blue;
+    border-left-width: 10px;
+    border-right-color: blue;
+    border-right-width: 10px;
+    border-top: 0;
+    border-bottom: 0;
+    margin:50px;
+}
+
+.dir-container{
+    
+    border-style: solid;
+    border-left-color:blue;
+    border-right-color:blue;
+    border-top: 0;
+    border-bottom: 0;
+    background-color: lightblue;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:nowrap;
+    font-size: 20px;
+    font-family: monospace;
+    text-decoration: none;
+
+    
+}
+
+
+
+/*
+.dir-cont-item a {
+    text-decoration: none;
+    color:black;
+    padding: 8px 16px;
+    
+}
+
+.dir-cont-item a:hover{
+    background-color:lightcoral;
+    color:red;
+    font-size:30px;
+    
+}
+
+
+
+.dir-cont-item a:active{
+    background-color:lightcoral;
+    color:red;
+    font-size:30px;
+}
+*/
+
+.red-item a{
+    text-decoration: inherit;
+    color:black;
+    padding: 8px 16px;
+}
+
+
+.red-item a:hover{
+    
+    background-color:lightcoral;
+    color:red;
+    font-size:30px;
+}
+
+.green-item a{
+    text-decoration: inherit;
+    color:black;
+    padding: 8px 16px;
+}
+
+.green-item a:hover{
+    background-color:lightgreen;
+    color:green;
+    font-size:30px;
+}
+
+.blue-item a{
+    text-decoration:inherit;
+    color:black;
+    padding: 8px 16px;
+}
+
+.blue-item a:hover{
+    background-color: lightskyblue;
+    color:blue;
+    font-size: 30px;
+}
+/*
+.dir-cont-item:hover{
+    background-color: yellow;
+    font-size:30px;
+}
+*/
+/*
+li a{
+    
+   // background-color:lightblue;
+    font-family: monospace;
+    font-size: 30px;
+    text-align:center;
+}
+
+li{
+    display:inline;
+    padding:100px;
+}
+
