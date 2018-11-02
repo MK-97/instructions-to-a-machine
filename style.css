@@ -1,0 +1,13 @@
+.box{
+
+    position:absolute;
+    background-color: orange;
+    height:13.5%;
+    width:60%;
+    left: 20%;
+    top: 20%;
+
+    font-size:100px;
+    text-align: center;
+    vertical-align:bottom;
+}
