@@ -1,16 +1,83 @@
-function display(input){
+var eval_string = '';
+var displayval;
+var decimal = false;
+var op = false;
+
+window.onload = function(){
     
-    var orangebox = document.getElementsByClassName('box');
+    var clearbtn = document.getElementById('clear');
+    var numbtns = document.getElementsByClassName('btn-num');
+    var opbtns = document.getElementsByClassName('btn-ops');
+    var displayscr = document.getElementById('display');
+    var decimalbtn = document.getElementById('dec');
+    var eqbtn = document.getElementById('equal')
     
-    var equation = orangebox[0].innerHTML;
+    // establish event listners
+    clearbtn.addEventListener('click', clear, false);
+    decimalbtn.addEventListener('click', addDecimal, false);
+    eqbtn.addEventListener('click', evaluate, false);
     
-    equation = equation.concat(input);
+    for(var x = 0; x < numbtns.length; x++){
+            numbtns[x].addEventListener('click', displayUpdate, false);
+    }
+    for(var x = 0; x < opbtns.length; x++){
+            opbtns[x].addEventListener('click', do_Op, false);
+    }
     
-    orangebox[0].innerHTML = equation;
+    
+} // end of onload
+
+function addDecimal(){
+    if (decimal)
+        return;
+    
+    displayval += '.';
+    eval_string +='.';
+    display.innerHTML += '.';
+    
+    decimal = true;
 }
 
-function operation(){
+function clear(){
+    displayval = '0';
+    eval_string = '';
+    display.innerHTML = displayval;
+    decimal = false;
+    op = false;
     
+} // end of clear
+
+function displayUpdate(input){
     
+    var btnval = input.target.innerHTML;
+    displayval = display.innerHTML;
+    
+    if(displayval === '0' || op){
+        displayval = '';
+    }
+    
+    eval_string += btnval;
+    displayval += btnval;
+    
+    display.innerHTML = displayval;
+    
+    op = false;
+    
+} // end of displayUpdate
+
+function do_Op(input){
+    var opval = input.target.innerHTML;
+    
+    if(op)
+        return;
+    
+    eval_string += opval;
+    //display.innerHTML = '0';
+    
+    op = true;
 }
 
+function evaluate(){
+    var result = eval(eval_string);
+    display.innerHTML = result;
+}

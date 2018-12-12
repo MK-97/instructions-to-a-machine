@@ -4,41 +4,62 @@
 
     <head>
     
-        <link rel = 'stylesheet' href = 'style.css'>
         
-        <script src = 'myscript.js'></script>
+        <link rel = 'stylesheet' href = 'calcstyle.css'>
+        
+        <script src = 'calcscript.js'>
+        
+        
+        </script>
     
     </head>
 
     <body>
-    
-        <div class = 'box'></div>
         
-        <div class = 'btn-grp'>
-        
-            <div class = 'nums'>
+        <div class = 'calcs' id = 'calcs'>
             
-                <button onclick = 'display(9)'>9</button>
-                <button onclick = 'display(8)'>8</button>
-                <button onclick = 'display(7)'>7</button>
-                <br>
-                <button onclick = 'display(6)'>6</button>
-                <button onclick = 'display(5)'>5</button>
-                <button onclick = 'display(4)'>4</button>
-                <br>
-                <button onclick = 'display(3)'>3</button>
-                <button onclick = 'display(2)'>2</button>
-                <button onclick = 'display(1)'>1</button>
-                <br>
-                <button onclick = 'display(0)'>0</button>
-                <button onclick = 'display(+)'>+</button>
-                <button onclick = 'display(-)'>-</button>
-
-            
+            <div class ='row'><!-- calc display -->
+                <div class = 'calc-display' id = 'display'>0</div>
             </div>
-        
+            
+            <div class ='row'> <!-- c +/- mod / -->
+                <div class = 'btn btn-op column' id='clear'>C</div>
+                <div class = 'btn btn-op column' id='flip'>+/-</div>
+                <div class = 'btn btn-op column' id='mod'>%</div>
+                <div class = 'btn btn-ops column' id='div'>/</div>
+            </div>
+            
+            <div class ='row'> <!-- 7 8 9 * -->
+                <div class = 'btn btn-num column' id = 'num-7'>7</div>
+                <div class = 'btn btn-num column' id = 'num-8'>8</div>
+                <div class = 'btn btn-num column' id = 'num-9'>9</div>
+                <div class = 'btn btn-ops column' id = 'op-*'>*</div>
+            </div>
+            
+            <div class ='row'> <!-- 4 5 6 - -->
+                <div class = 'btn btn-num column' id = 'num-4'>4</div>
+                <div class = 'btn btn-num column' id = 'num-5'>5</div>
+                <div class = 'btn btn-num column' id = 'num-6'>6</div>
+                <div class = 'btn btn-ops column' id='min'>-</div>
+                
+            </div>
+            
+            <div class ='row'> <!-- 1 2 3 + -->
+                <div class = 'btn btn-num column' id = 'num-1'>1</div>
+                <div class = 'btn btn-num column' id = 'num-2'>2</div>
+                <div class = 'btn btn-num column' id = 'num-3'>3</div>
+                <div class = 'btn btn-ops column' id='plus'>+</div>
+            </div>
+            
+            <div class ='row'> <!-- 0 . = -->
+                <div class = 'btn0 btn btn-num column' id = 'num-0'>0</div>
+                <div class = 'btn btn-dec column' id='dec'>.</div>
+                <div class = 'btn btn-eq column' id='equal'>=</div>
+                
+            </div>
+
         </div>
-    
+        
     </body>
     
 
