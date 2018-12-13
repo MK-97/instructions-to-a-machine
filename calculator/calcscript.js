@@ -2,6 +2,7 @@ var eval_string = '';
 var displayval;
 var decimal = false;
 var op = false;
+var neg = false;
 
 window.onload = function(){
     
@@ -44,6 +45,7 @@ function clear(){
     display.innerHTML = displayval;
     decimal = false;
     op = false;
+    neg = false;
     
 } // end of clear
 
@@ -52,24 +54,34 @@ function displayUpdate(input){
     var btnval = input.target.innerHTML;
     displayval = display.innerHTML;
     
-    if(displayval === '0' || op){
+    if(displayval === '0' || op && !neg){
         displayval = '';
     }
     
     eval_string += btnval;
     displayval += btnval;
     
+    console.log(displayval);
+    
     display.innerHTML = displayval;
     
     op = false;
+    neg = false;
     
 } // end of displayUpdate
 
 function do_Op(input){
     var opval = input.target.innerHTML;
     
+    
     if(op)
         return;
+    
+    if(opval === '-' && eval_string === ''){
+        display.innerHTML = opval;
+        displayval += opval;
+        neg = true;
+    }
     
     eval_string += opval;
     //display.innerHTML = '0';
